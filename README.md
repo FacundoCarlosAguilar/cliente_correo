@@ -54,3 +54,5 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 ### 4. TERMINAR EL README.md
+
+### uvicorn app.main:app --reload (EJECUTAR DESDE TERMINAL)
