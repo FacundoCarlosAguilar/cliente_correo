@@ -3,6 +3,7 @@ from mysql.connector import Error
 
 DB_CONFIG = {
     'host': 'localhost',
+    'port': 3443,
     'user': 'root',
     'password': 'facundo111',
     'database': 'cliente_correo'
@@ -17,7 +18,6 @@ def get_db_connection():
         return None
 
 def init_db():
-    """Verificar que la base de datos existe"""
     conn = get_db_connection()
     if conn:
         print("Conexión a MySQL exitosa")
