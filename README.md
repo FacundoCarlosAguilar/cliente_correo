@@ -34,25 +34,22 @@ CLIENTE_CORREO/
 │
 ├── venv/ # Entorno virtual
 ├── requirements.txt # Dependencias
+├── .env # SQL remoto
 └── README.md # Este archivo
 
-### Documentación de Endpoints: (http://localhost:8000/docs)
+### Documentación de Endpoints: (http://localhost:8050/docs)
 
-## Instalación y Configuración
+# 1. Clonar
+git clone <url-del-repo>
+cd cliente_correo
 
-### 1. Clonar o crear el proyecto
-
-### 2. Crear el entorno virtual
-
+# 2. Crear entorno virtual
 python -m venv venv
+venv\Scripts\activate  # Windows
+# source venv/bin/activate  # Mac/Linux
 
-# Activar en Windows:
-venv\Scripts\activate
-
-### 3. Instalar dependencias
-
+# 3. Instalar dependencias
 pip install -r requirements.txt
 
-### 4. TERMINAR EL README.md
-
-### uvicorn app.main:app --reload (EJECUTAR DESDE TERMINAL)
+# 7. Ejecutar la API
+python -m uvicorn app.main:app --reload --port 8050

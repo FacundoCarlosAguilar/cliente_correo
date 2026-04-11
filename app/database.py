@@ -1,12 +1,17 @@
+import os
 import mysql.connector
 from mysql.connector import Error
+from dotenv import load_dotenv
+
+# Esto carga las variables de tu archivo .env de forma segura
+load_dotenv()
 
 DB_CONFIG = {
-    'host': 'localhost',
-    'port': 3443,
-    'user': 'root',
-    'password': 'facundo111',
-    'database': 'cliente_correo'
+    'host': os.getenv('DB_HOST'),
+    'port': int(os.getenv('DB_PORT', 3306)),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASSWORD'),
+    'database': os.getenv('DB_DATABASE')
 }
 
 def get_db_connection():
